@@ -1,5 +1,6 @@
 <script>
   import ResizablePicture from '$lib/ResizablePicture.svelte';
+  import Map from '$lib/Map.svelte';
   export let item;
 </script>
 <article class="rental">
@@ -22,9 +23,5 @@
       <span>Number of bedrooms:</span> {item.bedrooms}
     </div>
   </div>
-  <div class="map">
-    <img 
-      alt="A map of {item.title}" 
-      src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-{item.location.lat},{item.location.long},9/150x150@2x?access_token=pk.eyJ1IjoiZW1iZXJqcyIsImEiOiJjazBycmxldGwwMDVvM2VxajdkYjl1OHY0In0.YeeBOuhKFJmuL3Tt9ueMgg" width="150" height="150">
-  </div>
+  <Map location={item.location} alt="A map of {item.title}"/>
 </article>

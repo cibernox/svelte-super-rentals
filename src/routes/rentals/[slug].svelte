@@ -19,6 +19,7 @@
 <script>
   import Jumbo from '$lib/Jumbo.svelte';
   import ResizablePicture from '$lib/ResizablePicture.svelte';
+  import Map from '$lib/Map.svelte';
   export let rental;
 </script>
 
@@ -53,11 +54,5 @@
     </div>
   </div>
 
-  <div class="map">
-    <img 
-      alt="A map of {rental.title}" 
-      class="large" 
-      src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/{rental.location.lat},{rental.location.long},12/894x600@2x?access_token=pk.eyJ1IjoiZW1iZXJqcyIsImEiOiJjazBycmxldGwwMDVvM2VxajdkYjl1OHY0In0.YeeBOuhKFJmuL3Tt9ueMgg" width="894" height="600">
-  </div>
-
+  <Map location={rental.location} alt="A map of {rental.title}" zoom="12" width="894" height="600"/>
 </article>
