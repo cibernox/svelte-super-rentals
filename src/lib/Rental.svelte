@@ -1,17 +1,13 @@
 <script>
+  import ResizablePicture from '$lib/ResizablePicture.svelte';
   export let item;
 </script>
 <article class="rental">
-  <button class="image" type="button">
-    <img src={item.image} alt="A picture of {item.title}">
-    <small>View Larger</small>
-  </button>
+  <ResizablePicture src={item.image} alt="A picture of {item.title}" />
 
   <div class="details">
     <h3>
-      <a href="/rentals/grand-old-mansion">
-        {item.title}
-      </a>
+      <a href="/rentals/{item.id}">{item.title}</a>
     </h3>
     <div class="detail owner">
       <span>Owner:</span> {item.owner}
