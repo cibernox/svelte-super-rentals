@@ -20,7 +20,7 @@ export default [
 		owner: 'Mike Teavee',
 		type: 'Community',
 		bedrooms: 1,
-		description: "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.",
+		description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.",
 		location: {
 			name: 'Seattle',
 			lat: -122.3321,
@@ -34,7 +34,7 @@ export default [
 		owner: 'Violet Beauregarde',
 		type: 'Community',
 		bedrooms: 3,
-		description: "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.",
+		description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.",
 		location: {
 			name: 'Portland',
 			lat: -122.6801,
