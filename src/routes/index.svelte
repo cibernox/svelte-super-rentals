@@ -21,6 +21,8 @@
   import Rental from '$lib/Rental.svelte';
   import Jumbo from '$lib/Jumbo.svelte';
   export let rentals;
+  let text = '';
+  $: filteredRentals = rentals.filter(r => r.title.includes(text))
 </script>
 <Jumbo>
   <h2>Welcome to Super Rentals!</h2>
@@ -31,12 +33,12 @@
 <div class="rentals">
   <label>
     <span>Where would you like to stay?</span>
-    <input class="light" type="text">
+    <input class="light" type="text" bind:value={text}>
   </label>
 
   <ul class="results">
     <li>
-      {#each rentals as item}
+      {#each filteredRentals as item}
         <Rental {item} />
       {/each}
   </ul>
