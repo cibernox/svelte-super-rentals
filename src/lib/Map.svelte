@@ -1,5 +1,6 @@
 <script>
-  let token = import.meta.env.VITE_MAPBOX_TOKEN;
+  // let token = import.meta.env.VITE_MAPBOX_TOKEN;
+  let token = "pk.eyJ1IjoiY2liZXJub3giLCJhIjoiY2twOG45aWo2MGJyeTJ1bjFlOGJyNjkyOCJ9.HPMm3q0cHgu22D7wisEhIA"
   export let location;
   export let alt;
   export let zoom = 9;

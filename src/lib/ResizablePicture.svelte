@@ -1,9 +1,9 @@
 <script>
   export let src;
   export let alt;
-  let isLarge = false;
+  let large = false;
 </script>
-<button on:click={() => isLarge = !isLarge} class="image" class:large={isLarge} type="button">
-  <img src={src} alt={alt}>
-  <small>View {isLarge ? 'Smaller' : 'Larger'}</small>
+<button data-testid="resizable-picture" on:click={() => large = !large} class="image" class:large type="button">
+  <img data-testid="resizable-picture-img" src={src} alt={alt}>
+  <small>View {large ? 'Smaller' : 'Larger'}</small>
 </button>

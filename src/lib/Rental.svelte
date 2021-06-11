@@ -1,25 +1,25 @@
 <script>
-  import ResizablePicture from '$lib/ResizablePicture.svelte';
-  import Map from '$lib/Map.svelte';
+  import ResizablePicture from './ResizablePicture.svelte';
+  import Map from './Map.svelte';
   export let item;
 </script>
-<article class="rental">
+<article class="rental" data-testid="rental">
   <ResizablePicture src={item.image} alt="A picture of {item.title}" />
 
   <div class="details">
     <h3>
       <a href="/rentals/{item.id}">{item.title}</a>
     </h3>
-    <div class="detail owner">
+    <div data-testid="owner" class="detail owner">
       <span>Owner:</span> {item.owner}
     </div>
-    <div class="detail type">
+    <div data-testid="type" class="detail type">
       <span>Type:</span> {item.type}
     </div>
-    <div class="detail location">
+    <div data-testid="city" class="detail location">
       <span>Location:</span> {item.location.name}
     </div>
-    <div class="detail bedrooms">
+    <div data-testid="bedrooms" class="detail bedrooms">
       <span>Number of bedrooms:</span> {item.bedrooms}
     </div>
   </div>

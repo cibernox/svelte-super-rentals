@@ -18,8 +18,8 @@
 </script>
 
 <script>
-  import Rental from '$lib/Rental.svelte';
-  import Jumbo from '$lib/Jumbo.svelte';
+  import Rental from '../lib/Rental.svelte';
+  import Jumbo from '../lib/Jumbo.svelte';
   export let rentals;
   let text = '';
   $: filteredRentals = rentals.filter(r => r.title.includes(text))
