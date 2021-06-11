@@ -7,7 +7,7 @@
   <ResizablePicture src={item.image} alt="A picture of {item.title}" />
 
   <div class="details">
-    <h3>
+    <h3 data-testid="title">
       <a href="/rentals/{item.id}">{item.title}</a>
     </h3>
     <div data-testid="owner" class="detail owner">
